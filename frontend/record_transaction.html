@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Record Transaction</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="transactions">
+    <form action="../backend/transactions.php" method="POST">
+        <h2>Record Transaction</h2>
+        <label>Customer ID:</label>
+        <input type="number" name="user_id" required>
+        <label>Type:</label>
+        <select name="type" required>
+            <option value="credit">Credit</option>
+            <option value="repayment">Repayment</option>
+        </select>
+        <label>Amount:</label>
+        <input type="number" name="amount" required>
+        <button type="submit">Record</button>
+    </form>
+    <footer>
+        <h4>Powered by Credit System</h4>
+    </footer>
+</body>
+</html>

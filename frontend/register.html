@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Customer Registration</h2>
+  <form method="POST" enctype="multipart/form-data" action="../backend/register.php">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required><br>
+
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" required><br>
+
+    <label for="credit_limit">Credit Limit:</label>
+    <input type="number" name="credit_limit" step="0.01"><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" required><br>
+
+    <label for="profile_image">Profile Image:</label>
+    <input type="file" name="profile_image"><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <footer>
+    <h4>Powered by Credit System</h4>
+  </footer>
+</body>
+</html>

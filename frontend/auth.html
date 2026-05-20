@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg,#4a90e2,#50c9c3);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 400px;
+      margin: 60px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4a90e2;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+    input, select, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      background: #4a90e2;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #357ab8;
+    }
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+    .tabs button {
+      flex: 1;
+      background: #eee;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 6px 6px 0 0;
+    }
+    .tabs button.active {
+      background: #4a90e2;
+      color: white;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function showForm(formId, btn) {
+      document.getElementById('loginForm').classList.add('hidden');
+      document.getElementById('registerForm').classList.add('hidden');
+      document.getElementById(formId).classList.remove('hidden');
+      document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <button class="active" onclick="showForm('loginForm', this)">Login</button>
+      <button onclick="showForm('registerForm', this)">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" action="../backend/auth.php" method="POST">
+      <input type="hidden" name="action" value="login">
+      <label>Email:</label>
+      <input type="email" name="email" required>
+      <label>Password:</label>
+      <input type="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" class="hidden" action="../backend/auth.php" method="POST">
+      <input type="hidden" name="action" value="register">
+      <label>Name:</label>
+      <input type="text" name="name" required>
+      <label>Phone:</label>
+      <input type="text" name="phone" required>
+      <label>Email:</label>
+      <input type="email" name="email" required>
+      <label>Password:</label>
+      <input type="password" name="password" required>
+      <label>Role:</label>
+      <select name="role" required>
+        <option value="customer">Customer</option>
+        <option value="owner">Owner</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>

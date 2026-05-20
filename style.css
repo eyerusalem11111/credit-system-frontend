@@ -1,0 +1,113 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", "Roboto", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section-specific gradient backgrounds */
+body.dashboard {
+    background: linear-gradient(135deg, #f0f9ff, #cbebff);
+}
+body.reports {
+    background: linear-gradient(135deg, #fff5f5, #ffe0e0);
+}
+body.transactions {
+    background: linear-gradient(135deg, #f9fff0, #e0ffc9);
+}
+body.reminders {
+    background: linear-gradient(135deg, #f5f0ff, #e0d6ff);
+}
+body.auth {
+    background: linear-gradient(135deg, #f0fff9, #d6ffe0);
+}
+
+/* Forms */
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 14px rgba(0,0,0,0.15);
+}
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+form input, form select, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+form button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+form button:hover {
+    background: #2980b9;
+}
+
+/* Tables full width */
+table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+table th {
+    background: #3498db;
+    color: #fff;
+    font-weight: 600;
+}
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+table tr:hover {
+    background: #f1f1f1;
+}
+
+/* Footer lively gradient */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    color: #fff;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+    table th, table td {
+        font-size: 14px;
+    }
+}

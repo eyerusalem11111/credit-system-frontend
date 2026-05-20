@@ -1,0 +1,81 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  color: #4a90e2;
+}
+
+/* Table Styling */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+table th {
+  background: linear-gradient(90deg, #4a90e2, #50c9c3);
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+table tr:hover {
+  background: #e6f7ff;
+  transition: background 0.3s;
+}
+
+/* Footer Gradient */
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(45deg, #4a90e2, #50c9c3, #7ed56f, #ff6f61);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  border-radius: 8px 8px 0 0;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar Links */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
