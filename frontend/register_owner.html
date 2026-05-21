@@ -2,32 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Owner Register</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Owner Registration</title>
 </head>
-<body>
-  <h2>Owner Registration</h2>
-  <form method="POST" enctype="multipart/form-data" action="../backend/register_owner.php">
-    <label for="name">Name:</label>
-    <input type="text" name="name" required><br>
+<body style="margin:0; font-family:Arial, sans-serif; background:linear-gradient(135deg,#4facfe,#00f2fe);">
 
-    <label for="phone">Phone:</label>
-    <input type="text" name="phone" required><br>
+  <div style="margin:60px auto; width:350px; padding:20px; background:#fff; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.2); text-align:center;">
+    <h2 style="margin-bottom:20px; color:#333;">Owner Registration</h2>
+    <form action="../backend/register_owner.php" method="POST">
+      <label for="username" style="display:block; text-align:left; margin-bottom:5px;">Username:</label>
+      <input type="text" id="username" name="username" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
 
-    <label for="email">Email:</label>
-    <input type="email" name="email" required><br>
+      <label for="email" style="display:block; text-align:left; margin-bottom:5px;">Email:</label>
+      <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
 
-    <label for="password">Password:</label>
-    <input type="password" name="password" required><br>
+      <label for="password" style="display:block; text-align:left; margin-bottom:5px;">Password:</label>
+      <input type="password" id="password" name="password" required style="width:100%; padding:10px; margin-bottom:20px; border:1px solid #ccc; border-radius:4px;">
 
-    <label for="profile_image">Profile Image:</label>
-    <input type="file" name="profile_image"><br>
+      <button type="submit" style="background:#0066cc; color:#fff; border:none; padding:12px; width:100%; border-radius:6px; cursor:pointer;">Register Owner</button>
+    </form>
+  </div>
 
-    <button type="submit">Register Owner</button>
-  </form>
-
-  <footer>
-    <h4>Powered by Credit System</h4>
+  <footer style="margin-top:40px; padding:20px; text-align:center; background:rgba(0,0,0,0.3); color:#fff;">
+    © 2026 Credit System Project
   </footer>
+
 </body>
 </html>
